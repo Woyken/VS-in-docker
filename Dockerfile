@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019
 SHELL ["cmd", "/S", "/C"]
 
 # Download the Build Tools bootstrapper.
-ADD https://aka.ms/vs/16/release/vs_professional.exe C:\TEMP\vs_professional.exe
+ADD https://aka.ms/vs/17/release/vs_professional.exe C:\TEMP\vs_professional.exe
 
 # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
 RUN C:\TEMP\vs_professional.exe --quiet --wait --norestart --nocache `
